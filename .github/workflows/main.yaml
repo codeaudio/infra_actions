@@ -39,10 +39,10 @@ jobs:
         - name: Login to Docker 
           uses: docker/login-action@v1 # Запуск скрипта авторизации на DockerHub
           with:
-            username: ikapustin7
-            password: 103864Ivan
+            username: ${{ secrets.DH_LOGIN }}
+            password: ${{ secrets.DH_PASS }}
         - name: Push to Docker Hub
           uses: docker/build-push-action@v2 # Выполняет push образа в DockerHub 
           with:
             push: true
-            tags: ikapustin7/infra:latest 
+            tags: ${{ secrets.DH_LOGIM }}/${{ secrets.DH_NAME_REPO> }}:latest 
