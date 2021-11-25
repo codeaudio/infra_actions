@@ -64,4 +64,4 @@ jobs:
           sudo docker pull ${{ secrets.DH_LOGIN }}/${{ secrets.DH_NAME_REPO }}
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ${{ secrets.DH_LOGIN }}/${{ secrets.DH_NAME_REPO }}
+          sudo docker run --rm -d -p 5005:5005 ${{ secrets.DH_LOGIN }}/${{ secrets.DH_NAME_REPO }}
